@@ -1,0 +1,13 @@
+{
+  "name": "Auth",
+  "alias": "auth",
+  "route": "auth",
+  "description": "Auth Module",
+  "keywords": [],
+  "active": 1,
+  "order": 0,
+  "providers": ["Modules\\Auth\\Providers\\AuthServiceProvider"],
+  "aliases": {},
+  "files": [],
+  "requires": []
+}

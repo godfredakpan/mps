@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@app/*": ["./*"],
+      "@mps/*": ["modules/MPS/*"],
+      "@mpsjs/*": ["modules/MPS/Resources/js/*"],
+      "@mlang/*": ["./resources/lang/modules/mps/*"],
+      "@mpscom/*": ["modules/MPS/Resources/js/components/*"]
+    }
+  },
+  "exclude": ["node_modules", "public", "modules/Auth/node_modules", "modules/MPS/node_modules", "modules/Shop/node_modules"]
+}

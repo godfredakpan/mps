@@ -1,0 +1,21 @@
+{
+  "private": true,
+  "scripts": {
+    "development": "mix",
+    "watch": "mix watch",
+    "hot": "mix watch --hot",
+    "test": "jest --no-cache",
+    "dev": "npm run development",
+    "prod": "npm run production",
+    "production": "mix --production",
+    "watch-poll": "mix watch -- --watch-options-poll=1000"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.2.5",
+    "cross-env": "^7.0.3",
+    "laravel-mix": "^6.0.18",
+    "laravel-mix-merge-manifest": "^2.0.0",
+    "postcss": "^8.2.13",
+    "tailwindcss": "^2.1.2"
+  }
+}

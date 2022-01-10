@@ -1,0 +1,88 @@
+.box {
+  // padding: 25px 20px;
+  // background-color: #2b2d3e;
+}
+.spline {
+  margin-left: 100px;
+}
+@media (min-width: 768px) and (max-width: 1280px) {
+  .spline {
+    margin-left: 0;
+    margin-top: 50px;
+  }
+}
+
+.shadow {
+  box-shadow: 0px 1px 15px 1px rgba(69, 65, 78, 0.08);
+}
+.sparkboxes {
+  .box {
+    padding-top: 10px;
+    border-radius: 4px;
+    position: relative;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    text-shadow: 0 1px 1px 1px #666;
+    // box-shadow: 0px 1px 15px 1px rgba(69, 65, 78, 0.08);
+    background-image: linear-gradient(135deg, #edf2f7 10%, #cbd5e0 100%);
+
+    .details {
+      padding-left: 10px;
+      position: absolute;
+      color: rgba($color: #000000, $alpha: 0.75);
+      &.light {
+        color: rgba($color: #ffffff, $alpha: 0.75);
+      }
+    }
+  }
+
+  .box.dark,
+  .box-hover:hover .box {
+    background-image: linear-gradient(135deg, #515a6e 40%, #17233d 100%);
+    // background-image: linear-gradient(135deg, #374151 10%, #111827 100%);
+    .details {
+      color: #ffffff;
+    }
+  }
+
+  .box.static {
+    padding: 0;
+    position: static;
+    .details {
+      padding: 20px;
+      display: block;
+      position: static;
+    }
+  }
+  strong {
+    top: -8px;
+    z-index: 3;
+    color: #fff;
+    position: relative;
+  }
+
+  .box1 {
+    background-image: linear-gradient(135deg, #5cadff 10%, #2b85e4 100%);
+  }
+  .box2 {
+    background-image: linear-gradient(135deg, #808695 10%, #17233d 100%);
+  }
+  .box3 {
+    background-image: linear-gradient(135deg, #c1fcc1 10%, #19be6b 100%);
+  }
+  .box4 {
+    background-image: linear-gradient(135deg, #ffd3a5 10%, #ff9900 100%);
+  }
+  .box5 {
+    background-image: linear-gradient(135deg, #2afadf 10%, #4c83ff 100%);
+  }
+  .box6 {
+    background-image: linear-gradient(135deg, #ee9ae5 10%, #5961f9 100%);
+  }
+  .box7 {
+    background-image: linear-gradient(135deg, #ffd3a5 10%, #fd6585 100%);
+  }
+  .box8 {
+    background-image: linear-gradient(135deg, #b794f4 10%, #6b46c1 100%);
+  }
+}

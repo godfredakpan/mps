@@ -1,0 +1,13 @@
+{
+  "name": "Shop",
+  "alias": "shop",
+  "route": "shop",
+  "description": "eCommerce Module",
+  "keywords": [],
+  "active": 0,
+  "order": 1,
+  "providers": [],
+  "aliases": {},
+  "files": [],
+  "requires": []
+}

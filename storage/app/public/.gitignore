@@ -1,0 +1,14 @@
+*
+!images/
+images/*
+!.gitignore
+!images/mps.png
+!images/mps.svg
+!images/icon.png
+!images/icon.svg
+!images/logo.png
+!images/logo.svg
+!images/mps-dark.png
+!images/mps-dark.svg
+!images/mps-light.png
+!images/mps-light.svg

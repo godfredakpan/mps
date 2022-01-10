@@ -1,0 +1,40 @@
+// Responsiveness
+
+$sm: 768px
+$md: 992
+$lg: 1200
+
+=xs
+  @media screen and (max-width: $sm - 1px)
+    @content
+
+=sm
+  @media screen and (min-width: $sm), print
+    @content
+
+=sm-only
+  @media screen and (min-width: $sm) and (max-width: $md - 1px)
+    @content
+
+=touch
+  @media screen and (max-width: $md - 1px)
+    @content
+
+=md
+  @media screen and (min-width: $md)
+    @content
+
+=md-only
+  @if $lg-enabled
+    @media screen and (min-width: $md) and (max-width: $lg - 1px)
+      @content
+
+=until-lg
+  @if $lg-enabled
+    @media screen and (max-width: $lg - 1px)
+      @content
+
+=lg
+  @if $lg-enabled
+    @media screen and (min-width: $lg)
+      @content

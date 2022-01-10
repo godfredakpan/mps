@@ -1,0 +1,87 @@
+.order {
+  @media (max-width: 767px) {
+    min-width: 680px;
+  }
+  .order-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+
+    .logo {
+      max-height: 70px;
+      max-width: 220px;
+      padding-right: 16px;
+    }
+    .details {
+      flex: 3;
+      flex-grow: 1;
+      display: flex;
+      margin-right: 16px;
+      align-items: flex-start;
+      .header-text {
+        flex: 3;
+        flex-grow: 1;
+        display: flex;
+        max-height: 90px;
+        overflow: hidden;
+        ul {
+          margin: 0;
+          width: 100%;
+          list-style: none;
+          font-size: 0.9em;
+          text-align: right;
+        }
+      }
+    }
+
+    .barcode,
+    .barcode img,
+    .barcode svg {
+      max-width: 260px;
+    }
+  }
+}
+
+.fullpage {
+  display: flex;
+  padding: 16px;
+  min-width: 100%;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.order-view {
+  border-radius: 6px;
+  padding-bottom: 16px;
+  border: 1px solid #eaf0f5;
+  .order {
+    padding: 16px;
+  }
+}
+.pdf .content-wrapper {
+  max-width: 100% !important;
+  @media (max-width: 767px) {
+    overflow-x: scroll;
+  }
+  *,
+  .ivu-card-bordered {
+    overflow: visible;
+    box-shadow: none !important;
+    border-radius: 4px !important;
+    border-color: #e8eaec !important;
+  }
+}
+@media print {
+  .fullpage {
+    padding: 0 !important;
+    justify-content: flex-start !important;
+  }
+  .order-view {
+    border: 0;
+    padding: 0;
+    width: 100%;
+    border-radius: 0;
+  }
+}

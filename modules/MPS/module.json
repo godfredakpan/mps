@@ -1,0 +1,13 @@
+{
+  "name": "MPS",
+  "alias": "mps",
+  "route": "admin",
+  "description": "Admin Module",
+  "keywords": [],
+  "active": 1,
+  "order": 2,
+  "providers": ["Modules\\MPS\\Providers\\MPSServiceProvider", "Modules\\MPS\\Providers\\EventServiceProvider"],
+  "aliases": {},
+  "files": ["Helpers/helpers.php"],
+  "requires": []
+}

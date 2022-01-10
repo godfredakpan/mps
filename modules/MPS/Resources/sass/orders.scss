@@ -1,0 +1,185 @@
+// $color: #ffffff;
+// $bgColor: #515a6e;
+// $bgOddColor: lighten($bgColor, 15%);
+// $bgEvenColor: lighten($bgColor, 10%);
+// $borderColor: darken($bgColor, 5%);
+$radius: 0;
+$color: #515a6e;
+$bgColor: #dddddd;
+$bgOddColor: #ffffff;
+$bgEvenColor: #f5f5f5;
+$mbgOddColor: #f5f5f5;
+$mbgEvenColor: #ffffff;
+$borderColor: darken($bgColor, 2%);
+.order-items {
+  border-radius: $radius;
+  border: 1px solid $borderColor;
+  .header {
+    color: $color;
+    display: flex;
+    padding: 6px 10px;
+    font-weight: bold;
+    align-items: center;
+    background: $bgColor;
+    justify-content: center;
+    border-radius: $radius $radius 0 0;
+    border-bottom: 1px solid $borderColor;
+    .index {
+      width: 30px;
+      // margin-right: 10px;
+      text-align: center;
+    }
+    .remove {
+      width: 30px;
+      margin-right: 10px;
+      text-align: center;
+    }
+    .details {
+      flex: 1;
+    }
+    .price {
+      width: 125px;
+      text-align: center;
+    }
+    .discount {
+      width: 125px;
+      text-align: center;
+    }
+    .quantity {
+      width: 100px;
+      text-align: center;
+    }
+    .taxes {
+      width: 150px;
+      text-align: center;
+    }
+    .subtotal {
+      width: 150px;
+      text-align: right;
+      padding-right: 10px;
+    }
+  }
+  .order-item {
+    color: $color;
+    padding: 5px 10px;
+    border-bottom: 1px solid $borderColor;
+    &:nth-child(even) {
+      background: $bgEvenColor;
+      .bg {
+        background: $mbgEvenColor;
+      }
+    }
+    &:nth-child(odd) {
+      background: $bgOddColor;
+      .bg {
+        background: $mbgOddColor;
+      }
+    }
+    &:last-child {
+      border-bottom: 0;
+    }
+    .combo {
+      padding-bottom: 5px;
+      &:last-child {
+        padding-bottom: 0;
+      }
+    }
+    .item,
+    .combo-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .index {
+        width: 30px;
+        font-weight: bold;
+        // margin-right: 10px;
+        text-align: center;
+        // align-self: flex-start;
+      }
+      .remove {
+        width: 30px;
+        margin-right: 10px;
+        text-align: center;
+      }
+      .details {
+        flex: 1;
+        transition: all 0.3s ease;
+        &.pointer:hover {
+          color: #ffffff;
+          margin-right: 5px;
+          padding-left: 10px;
+          border-radius: 4px;
+          background: #2d8cf0;
+          // color: rgba(0, 0, 0, 0.8);
+          // background: rgba(0, 255, 255, 0.5);
+        }
+      }
+      .price {
+        width: 125px;
+        text-align: center;
+      }
+      .discount {
+        width: 125px;
+        text-align: center;
+      }
+      .quantity {
+        width: 100px;
+        .ivu-input-number {
+          width: 100% !important;
+        }
+      }
+      .taxes {
+        width: 150px;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+      .subtotal {
+        width: 150px;
+        padding-right: 10px;
+        text-align: right;
+        font-weight: bold;
+      }
+    }
+    .item {
+      margin-bottom: 5px;
+    }
+    .combo-item {
+      line-height: 24px;
+      border-top: 1px dotted $borderColor;
+      .input {
+        height: 24px;
+        padding: 0 7px;
+        border-radius: 4px;
+        background-color: #f5f7f9;
+        border: 1px solid #dcdee2;
+      }
+    }
+    .bg {
+      // border-radius: 4px;
+      // border: 1px solid $borderColor;
+    }
+    .bt0 {
+      border-top: 0;
+    }
+    .bb {
+      border-bottom: 1px dotted $borderColor;
+    }
+    .pt {
+      padding-top: 5px;
+    }
+    .pb {
+      padding-bottom: 5px;
+    }
+    .variation {
+      padding-top: 4px;
+      padding-bottom: 4px;
+      border-top: 1px dotted $borderColor;
+      &:last-child {
+        padding-bottom: 0;
+      }
+    }
+  }
+  .ps {
+    border-radius: 0 0 $radius $radius;
+  }
+}

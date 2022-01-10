@@ -1,0 +1,35 @@
+{
+  "private": true,
+  "version": "0.6.0",
+  "scripts": {
+    "mps:u": "cd modules/MPS && npm update",
+    "mps:i": "cd modules/MPS && npm install",
+    "mps:h": "cd modules/MPS && npm run hot",
+    "mps:p": "cd modules/MPS && npm run prod",
+    "mps:t": "cd modules/MPS && npm run test",
+    "mps:w": "cd modules/MPS && npm run watch",
+    "shop:u": "cd modules/Shop && npm update",
+    "shop:i": "cd modules/Shop && npm install",
+    "shop:h": "cd modules/Shop && npm run hot",
+    "auth:p": "cd modules/Auth && npm run prod",
+    "shop:p": "cd modules/Shop && npm run prod",
+    "shop:w": "cd modules/Shop && npm run watch",
+    "mps:d": "cd modules/MPS && npm run development",
+    "shop:d": "cd modules/Shop && npm run development",
+    "gsw": "workbox injectManifest workbox-config.js",
+    "pack": "./pack",
+    "development": "mix",
+    "production": "mix --production",
+    "prod": "node cleanPublicFolder.js && npm run production && npm run auth:p && npm run mps:p && npm run shop:p && npm run gsw"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "laravel-mix": "^6.0.18",
+    "resolve-url-loader": "^3.1.2",
+    "semver": "^7.3.5",
+    "workbox-webpack-plugin": "^6.1.5"
+  },
+  "dependencies": {
+    "workbox-cli": "^6.1.5"
+  }
+}

@@ -1,0 +1,21 @@
+{
+    "name": "tecdiary/auth",
+    "description": "Auth Module",
+    "authors": [
+        {
+            "name": "Mian Saleem",
+            "email": "saleem@tecdiary.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": ["Modules\\Auth\\Providers\\AuthServiceProvider"],
+            "aliases": {}
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Auth\\": ""
+        }
+    }
+}

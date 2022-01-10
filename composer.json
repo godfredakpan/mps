@@ -1,0 +1,120 @@
+{
+  "name": "tecdiary/mps",
+  "version": "0.7.5",
+  "type": "project",
+  "description": "Modern Point of Sale Solution",
+  "keywords": [
+    "mps",
+    "pos",
+    "tecdiary"
+  ],
+  "license": "MIT",
+  "require": {
+    "php": "^8.0",
+    "academe/omnipay-authorizenetapi": "^3.1",
+    "accentinteractive/laravel-logcleaner": "^1.0",
+    "amrshawky/laravel-currency": "^4.0",
+    "barryvdh/laravel-dompdf": "^0.9.0",
+    "bnbwebexpertise/laravel-attachments": "^1.0",
+    "composer/composer": "^2.0",
+    "doctrine/dbal": "^2.9",
+    "fideloper/proxy": "^4.2",
+    "fruitcake/laravel-cors": "^2.0",
+    "guzzlehttp/guzzle": "^7.0.1",
+    "jantinnerezo/livewire-alert": "^2.1",
+    "laravel/framework": "^8.0",
+    "laravel/jetstream": "^2.3",
+    "laravel/legacy-factories": "^1.1",
+    "laravel/sanctum": "^2.10",
+    "laravel/tinker": "^2.0",
+    "league/commonmark": "^2.0",
+    "league/omnipay": "^3.1",
+    "livewire/livewire": "^2.5.1",
+    "maatwebsite/excel": "^3.1",
+    "menarasolutions/geographer-laravel": "^0.2.1",
+    "mhmiton/laravel-modules-livewire": "^1.1",
+    "moneyphp/money": "^3.2",
+    "morrislaptop/laravel-queue-clear": "^1.2",
+    "nwidart/laravel-modules": "^8.0",
+    "omnipay/paypal": "^3.0",
+    "omnipay/stripe": "^3.1",
+    "picqer/php-barcode-generator": "^2.2",
+    "predis/predis": "^1.1",
+    "ramsey/uuid": "^4.1",
+    "robinvdvleuten/ulid": "^5.0",
+    "spatie/laravel-activitylog": "^3.9",
+    "spatie/laravel-backup": "^6.14",
+    "spatie/laravel-medialibrary": "^9.0",
+    "spatie/laravel-newsletter": "^4.10",
+    "spatie/laravel-permission": "^3.2",
+    "spatie/laravel-schemaless-attributes": "^1.6",
+    "spatie/laravel-sitemap": "^6.0",
+    "spatie/laravel-sluggable": "^2.2",
+    "tecdiary/installer": "dev-develop|dev-master"
+  },
+  "require-dev": {
+    "barryvdh/laravel-debugbar": "^3.3",
+    "brianium/paratest": "^6.2",
+    "facade/ignition": "^2.3.6",
+    "fzaninotto/faker": "^1.9.1",
+    "laravel/ui": "^3.0",
+    "mockery/mockery": "^1.3.1",
+    "nunomaduro/collision": "^5.0",
+    "orchestra/testbench": "^6.0",
+    "phpunit/phpunit": "^9.3"
+  },
+  "repositories": [
+    {
+      "type": "path",
+      "url": "./packages/installer",
+      "options": {
+        "symlink": true
+      }
+    }
+  ],
+  "config": {
+    "optimize-autoloader": true,
+    "preferred-install": "dist",
+    "sort-packages": true
+  },
+  "extra": {
+    "laravel": {
+      "dont-discover": []
+    }
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "app/",
+      "Modules\\": "modules/",
+      "Database\\Seeders\\": "database/seeders/",
+      "Database\\Factories\\": "database/factories/"
+    },
+    "classmap": [
+      "database/seeds",
+      "database/factories"
+    ],
+    "files": [
+      "app/Helpers/helpers.php"
+    ]
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests/"
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "scripts": {
+    "post-autoload-dump": [
+      "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+      "@php artisan package:discover --ansi",
+      "@php artisan vendor:publish --tag assets --force"
+    ],
+    "post-root-package-install": [
+      "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+    ],
+    "post-create-project-cmd": [
+      "@php artisan key:generate --ansi"
+    ]
+  }
+}

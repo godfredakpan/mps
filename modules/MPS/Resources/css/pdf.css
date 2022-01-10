@@ -1,0 +1,49 @@
+@tailwind base;
+
+@layer base {
+  *,
+  ::before,
+  ::after {
+    border-width: 0;
+    border-style: solid;
+    border-color: #ccc;
+  }
+  body {
+    font-family: DejaVu Sans;
+  }
+  table thead,
+  table tfoot {
+    display: table-row-group;
+  }
+  .summary th,
+  .summary td,
+  tfoot.divide-y th,
+  tfoot.divide-y td {
+    border-top-width: 1px;
+  }
+  td {
+    vertical-align: top;
+  }
+}
+
+@tailwind components;
+@tailwind utilities;
+
+@page {
+  margin: 40px 30px;
+}
+thead {
+  @apply bg-gray-100;
+}
+.left {
+  width: 50%;
+  float: left;
+}
+.right {
+  width: 50%;
+  float: right;
+}
+.clearfix {
+  clear: both;
+  height: 1px;
+}

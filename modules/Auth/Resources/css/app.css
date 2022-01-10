@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.focus\:z-10:focus {
+  z-index: 10;
+}
+.focus\:shadow-outline-blue:focus {
+  box-shadow: 0 0 0 3px rgba(164, 202, 254, 0.45);
+}

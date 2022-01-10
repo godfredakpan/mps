@@ -1,0 +1,16 @@
+{
+    "env": {
+        "development": {
+            "presets": ["@babel/preset-env"],
+            "plugins": ["transform-vue-jsx", "syntax-dynamic-import"]
+        },
+        "production": {
+            "presets": ["@babel/preset-env"],
+            "plugins": ["transform-vue-jsx", "syntax-dynamic-import"]
+        },
+        "test": {
+            "plugins": ["transform-vue-jsx", "syntax-dynamic-import"],
+            "presets": [["@babel/preset-env", { "targets": { "node": "current" } }]]
+        }
+    }
+}

@@ -1,0 +1,37 @@
+{
+  "name": "tecdiary/installer",
+  "description": "Installer for Tecdiary Web Applications",
+  "authors": [
+    {
+      "name": "Mian Saleem",
+      "email": "saleem@tecdiary.com"
+    }
+  ],
+  "require": {
+    "php": "^7.4|^8.0",
+    "guzzlehttp/guzzle": "^7.0",
+    "illuminate/support": "^6.0 || ^7.0 || ^8.0"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "autoload": {
+    "psr-4": {
+      "Tecdiary\\Installer\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tecdiary\\Installer\\Tests\\": "tests"
+    }
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Tecdiary\\Installer\\InstallServiceProvider"
+      ]
+    }
+  }
+}

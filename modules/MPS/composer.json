@@ -1,0 +1,33 @@
+{
+  "name": "tecdiary/mps",
+  "description": "MPS Module",
+  "authors": [
+    {
+      "name": "Mian Saleem",
+      "email": "saleem@tecdiary.com"
+    }
+  ],
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Modules\\MPS\\Providers\\MPSServiceProvider",
+        "Modules\\MPS\\Providers\\EventServiceProvider"
+      ],
+      "aliases": {}
+    }
+  },
+  "autoload": {
+    "psr-4": {
+      "Modules\\MPS\\": "",
+      "Database\\Seeders\\": "Database/seeders/",
+      "Database\\Factories\\": "Database/factories/"
+    },
+    "classmap": [
+      "Database/seeds",
+      "Database/factories"
+    ],
+    "files": [
+      "Helpers/helpers.php"
+    ]
+  }
+}

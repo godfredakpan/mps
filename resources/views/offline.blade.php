@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>Network Error!</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            height: 100vh;
+            color: #9CA3AF;
+            font-weight: 200;
+            line-height: 1.5;
+            background-color: #111827;
+            font-family: Cerebri Sans, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        }
+
+        .full-height {
+            height: 100vh;
+        }
+
+        .flex-center {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .content {
+            margin: auto;
+            padding: 16px;
+            text-align: center;
+        }
+
+        .title {
+            font-size: 24px;
+            line-height: 1.1;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="flex-center full-height">
+        <div class="content">
+            <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" stroke="#F87171" fill="#F87171"
+                style="max-height: 200px; max-width: 200px; min-height: 80px; min-width: 80px;">
+                <g>
+                    <path
+                        d="m476 48h-440a28.032 28.032 0 0 0 -28 28v360a28.032 28.032 0 0 0 28 28h440a28.032 28.032 0 0 0 28-28v-360a28.032 28.032 0 0 0 -28-28zm-440 16h440a12.013 12.013 0 0 1 12 12v20h-464v-20a12.013 12.013 0 0 1 12-12zm440 384h-440a12.013 12.013 0 0 1 -12-12v-324h464v324a12.013 12.013 0 0 1 -12 12z" />
+                    <path d="m40 88h8a8 8 0 0 0 0-16h-8a8 8 0 0 0 0 16z" />
+                    <path d="m72 88h8a8 8 0 0 0 0-16h-8a8 8 0 0 0 0 16z" />
+                    <path d="m104 88h8a8 8 0 0 0 0-16h-8a8 8 0 0 0 0 16z" />
+                    <path
+                        d="m136 200a80 80 0 1 0 80 80 80.091 80.091 0 0 0 -80-80zm0 144a64 64 0 1 1 64-64 64.072 64.072 0 0 1 -64 64z" />
+                    <path
+                        d="m165.657 250.343a8 8 0 0 0 -11.314 0l-18.343 18.343-18.343-18.343a8 8 0 0 0 -11.314 11.314l18.343 18.343-18.343 18.343a8 8 0 0 0 11.314 11.314l18.343-18.343 18.343 18.343a8 8 0 1 0 11.314-11.314l-18.343-18.343 18.343-18.343a8 8 0 0 0 0-11.314z" />
+                    <path d="m448 232h-192a8 8 0 0 0 0 16h192a8 8 0 0 0 0-16z" />
+                    <path d="m256 272h72a8 8 0 0 0 0-16h-72a8 8 0 0 0 0 16z" />
+                    <path d="m448 280h-192a8 8 0 0 0 0 16h192a8 8 0 0 0 0-16z" />
+                    <path d="m352 304h-96a8 8 0 0 0 0 16h96a8 8 0 0 0 0-16z" />
+                    <path d="m384 304h-8a8 8 0 0 0 0 16h8a8 8 0 0 0 0-16z" />
+                    <path d="m448 256h-96a8 8 0 0 0 0 16h96a8 8 0 0 0 0-16z" />
+                </g>
+            </svg>
+            <div class="title">
+                <h1>{{ config('app.name') }}</h1>
+            </div>
+            <p>Sorry! the page you have requested is not available in <strong>offline-mode</strong>.</p>
+            <p>Please check your <strong>network connection</strong> and try again.</p>
+        </div>
+    </div>
+
+    <script>
+        window.addEventListener('load', function() {
+            function updateOnlineStatus() {
+                if (navigator.onLine) {
+                    console.log('on');
+                    window.location.replace('/');
+                } else {
+                    console.log('off');
+                    window.location.replace('/offline');
+                }
+            }
+            window.addEventListener('online', updateOnlineStatus);
+            window.addEventListener('offline', updateOnlineStatus);
+            updateOnlineStatus();
+        });
+
+    </script>
+</body>
+
+</html>
